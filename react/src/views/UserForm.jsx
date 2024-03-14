@@ -36,7 +36,6 @@ export default function UserForm() {
     if (user.id) {
       axiosClient.put(`/users/${user.id}`, user)
         .then(() => {
-          //TODO show notification
           setNotification("User was successfully updated!")
           navigate('/users');
         })
@@ -49,7 +48,6 @@ export default function UserForm() {
     } else {
       axiosClient.post(`/users`, user)
         .then(() => {
-          //TODO show notification
           setNotification("User was successfully created!")
           navigate('/users');
         })
